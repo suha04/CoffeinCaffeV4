@@ -46,7 +46,7 @@
                 </li>
                 
                 <li>
-                    <a href="#elerhetoseg" draggable="false">Kapcsolat</a>
+                    <a href="#kapcsolat" draggable="false">Kapcsolat</a>
                 </li>
                 <li>
                     <a href="#galeria" draggable="false">Galéria</a>
@@ -208,25 +208,28 @@
                         <div class="iconok">
                             <img draggable="false" src="assets/img/icons/write.png" alt="Árajánlat kérése" title="Árajánlat kérése">
                             <div class="center">
-                                <a class="gomb" href="#">Árajánlat Kérése</a>
+                                <a class="gomb" href="#ajanlatkeres">Árajánlat Kérése</a>
                             </div>
                         </div>
                         <div class="iconok">
                             <img draggable="false" src="assets/img/icons/liquor.png" alt="Itallap" title="Itallap">
                             <div class="center">
-                                <a class="gomb" href="#">Itallap</a>
+                                <a id="itallapGomb" class="gomb">Itallap</a>
+                                
                             </div>
                         </div>
                         <div class="iconok">
                             <img draggable="false" src="assets/img/icons/price.png" alt="Árlista" title="Árlista">
                             <div class="center">
-                                <a class="gomb" href="#">Árlista</a>
+                                <a id="arlistaGomb" class="gomb">Árlista</a>
                             </div>
                         </div>
                     </div>
             </div>
         </div>
 
+
+      
         <!-- PALACSINTÁINK -->
         <div class="container" id="palacsintaink">
             <div class="halfContainer textContent" id="foodora">
@@ -244,57 +247,61 @@
             </div>
         </div>
 
-        <!-- ELÉRHETŐSÉGÜNK -->
-        <div class="container" id="elerhetoseg">
+        <!-- KAPCSOLAT -->
+        <div class="container" id="kapcsolat">
             <div class="halfContainer textContent card">
                 <h2 class="cikkcim">Kapcsolat</h2>
-                <div class="halfContainer textContent">
+                <div class="textContent" id="elerhetoseg"> 
+               
+                    <h2 class="alcim">Elérhetőségeink</h2>
+                    
+                    <p> 
+                        <span><i class="fa-solid fa-phone"></i>06-1-259-1635</span>
+                        
+                        <br>
+                        <span><i class="fa-solid fa-mobile-screen-button"></i>06-30-256-8082</span>
+                        
+                        <br>
+                        <span><i class="fa-solid fa-envelope"></i>ildi.kokusz@freemail.hu</span>
+                       
+                        <br>
+                        <span><i class="fa-solid fa-location-dot"></i>1171. Budapest Zrínyi utca 161.</span>
+                        
+                     </p>
+
+                </div>
+                <div class="textContent" id="megkozelites">
                     <h2 class="alcim">Megközelítés</h2>
                     <p>
-                        Budapest XVII. ker. Zrínyi utca 161.
-                        <br><br>
+                        
                         Megközelíthető a 161-es és 202E busszal, illetve a Kucorgó térről 5 perc sétával. </h2>
 
                     </p>
                 </div>
-                <div class="textContent">
-                    
-                <h2 class="alcim">Elérhetőségeink</h2>
-
-                <p>
-                Mobil: 06-30-256-8082
-                <br>
-                Telefon/Fax: 06-1-259-1635
-                <br>
-                E-mail: ildi.kokusz@freemail.hu
-                </p>
-
-
-                </div>
           
             </div>
-            <div class="halfContainer textContent card">
+            <div class="halfContainer textContent card" id="ajanlatkeres">
                 
                 <h2 class="cikkcim">Ajánlatkérés</h2>
 
-                    <form action="mailto:suhalex04@gmail.com" method="post" enctype="text/plain" id="ajanlatkeres">
+                <form action="https://formspree.io/f/mgejvgdk" method="post" id="ajanlatForm">
                         
                         
 
-                        <input type="text" id="nev" name="nev" placeholder="Név*" required>
-                        <br>
-                        
-                        <input type="email" id="email" name="email" placeholder="E-mail cím*" required>
-                        <br>
-                        
-                        <input type="tel" id="telefonszam" name="telefonszam" placeholder="Telefonszám*" required>
-                        <br>
-                        
-                        <textarea id="uzenet" name="uzenet" placeholder="Üzenet*" rows="5" required></textarea>
-                        <br>
+                    <input type="text" id="nev" name="nev" placeholder="Név*" required>
+                    <br>
+                    
+                    <input type="email" id="email" name="email" placeholder="E-mail cím*" required>
+                    <br>
+                    
+                    <input type="tel" id="telefonszam" name="telefonszam" placeholder="Telefonszám*" required>
+                    <br>
+                    
+                    <textarea id="uzenet" name="uzenet" placeholder="Üzenet*" rows="5" required></textarea>
+                    <br>
 
-                        <input type="submit" value="Küldés">
-                    </form>
+                    <input type="submit" value="Küldés">
+                </form>
                 
                 
                 </div>
@@ -314,9 +321,539 @@
         
         
 
+   <!-- First Pop-up container -->
+   <div id="myModal1" class="modal">
+     <!-- Content inside the first pop-up -->
+    <div class="modal-content">
+       <!-- Add your content for Modal 1 here -->
+       <i class="fa-solid fa-xmark close"></i>
+       <h1>Itallap</h1>
+       <div class="table-flex-container">
+<div class="table-container">
+       <table class="listaTable">
+        <tr>
+          <th>Röviditalok</th>
+          <th>2cl</th>
+          <th>4cl</th>
+        </tr>
+        <tr>
+          <td>Tequila</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Unikum / Szilvás</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Jägermeister</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Bacardi</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Johnnie Walker</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Jim Beam</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Jack Daniels</td>
+          <td>475.-</td>
+          <td>950.-</td>
+        </tr>
+        <tr>
+          <td>Vodka</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Baileys</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Mozart</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Sheridan's</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Hubertus</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Martini</td>
+          <td>370.-</td>
+          <td>740.-</td>
+        </tr>
+        <tr>
+          <td>Becherovka</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Gin</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Vilmos körte</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Malibu</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Captain Morgan</td>
+          <td>420.-</td>
+          <td>840.-</td>
+        </tr>
+        <tr>
+          <td>Tatratea</td>
+          <td>495.-</td>
+          <td>990.-</td>
+        </tr>
+        <tr>
+          <td>Makum</td>
+          <td>690.-</td>
+          <td>1380.-</td>
+        </tr>
+      </table>
+    </div>
+    <div class="table-container">
+        <table class="listaTable">
+         <tr>
+           <th>Pálinkák</th>
+           <th>2cl</th>
+           <th>4cl</th>
+         </tr>
+         <tr>
+           <td>Szilva</td>
+           <td>690.-</td>
+           <td>1380.-</td>
+         </tr>
+         <tr>
+           <td>Barack</td>
+           <td>690.-</td>
+           <td>1380.-</td>
+         </tr>
+         <tr>
+           <td>Meggy</td>
+           <td>690.-</td>
+           <td>1380.-</td>
+         </tr>
+         <tr>
+           <td>Körte</td>
+           <td>690.-</td>
+           <td>1380.-</td>
+           
+         </tr>
+       </table>
+     </div>
+     <div class="table-container">
+        <table class="listaTable">
+         <tr>
+            <th>Fütyülősök</th>
+            <th>2cl</th>
+            <th>4cl</th>
+          </tr>
+          <tr>
+            <td>Mézes Meggy</td>
+            <td>370.-</td>
+            <td>740.-</td>
+          </tr>
+          <tr>
+            <td>Mézes Málna</td>
+            <td>370.-</td>
+            <td>740.-</td>
+          </tr>
+          <tr>
+            <td>Mézes Szilva</td>
+            <td>370.-</td>
+            <td>740.-</td>
+          </tr>
+          <tr>
+            <td>Ágyas Feketecseresznye</td>
+            <td>370.-</td>
+            <td>740.-</td>
+          </tr>
+          <tr>
+            <td>Csokis Mogyoró</td>
+            <td>370.-</td>
+            <td>740.-</td>
+          </tr>
+          <tr>
+            <td>Barack</td>
+            <td>370.-</td>
+            <td>740.-</td>
+          </tr>
+          <tr>
+            <td>Epres Rozé</td>
+            <td>370.-</td>
+            <td>740.-</td>
+          </tr>
+       </table>
+     </div>
+
+
+     <div class="table-container">
+        <table class="listaTable">
+            <tr>
+                <th>Csapolt Sör</th>
+                <th>0,3L</th>
+                <th>0,5L</th>
+             </tr>
+          <tr>
+            <td>Brandecker</td>
+            <td>370.-</td>
+            <td>620.-</td>
+          </tr>
+       </table>
+     </div>
+     
+     <div class="table-container">
+        <table class="listaTable">
+         <tr>
+            <th>Üveges sörök</th>
+            <th>/Üveg</th>
+          </tr>
+          <tr>
+            <td>Arany Ászok</td>
+            <td>550.-</td>
+          </tr>
+          <tr>
+            <td>Alkoholmentes Sör</td>
+            <td>590.-</td>
+          </tr>
+          <tr>
+            <td>Citromos Sör</td>
+            <td>590.-</td>
+          </tr>
+          <tr>
+            <td>Dréher</td>
+            <td>590.-</td>
+          </tr>
+          <tr>
+            <td>Edelweiss Búzasör</td>
+            <td>790.-</td>
+          </tr>
+          <tr>
+            <td>Miller</td>
+            <td>590.-</td>
+          </tr>
+          <tr>
+            <td>Dreher IPA</td>
+            <td>690.-</td>
+          </tr>
+       </table>
+     </div>
+     <div class="table-container">
+        <table class="listaTable">
+         <tr>
+            <th>Borok</th>
+            <th>0,1L</th>
+          </tr>
+          <tr>
+            <td>Fehér</td>
+            <td>290.-</td>
+          </tr>
+          <tr>
+            <td>Rozé</td>
+            <td>290.-</td>
+          </tr>
+          <tr>
+            <td>Vörös</td>
+            <td>290.-</td>
+          </tr>
+       </table>
+     </div>
+     <div class="table-container">
+        <table class="listaTable">
+         <tr>
+            <th>Kimért Üdítők</th>
+            <th>0,3L</th>
+            <th>0,5L</th>
+          </tr>
+          <tr>
+            <td>Coca-Cola</td>
+            <td>300.-</td>
+            <td>500.-</td>
+          </tr>
+          <tr>
+            <td>Ice Tea</td>
+            <td>300.-</td>
+            <td>500.-</td>
+          </tr>
+       </table>
+     </div>
+     <div class="table-container">
+        <table class="listaTable">
+         <tr>
+            <th>Üveges Üdítők</th>
+            <th>/Üveg</th>
+          </tr>
+          <tr>
+            <td>Coca-Cola Zero</td>
+            <td>390.-</td>
+          </tr>
+          <tr>
+            <td>Gyömbér</td>
+            <td>390.-</td>
+          </tr>
+          <tr>
+            <td>Tonic</td>
+            <td>390.-</td>
+          </tr>
+          <tr>
+            <td>Ásványvíz (Mentes/Szénsavas)</td>
+            <td>390.-</td>
+          </tr>
+          <tr>
+            <td>Topjoy (Több ízben)</td>
+            <td>390.-</td>
+          </tr>
+          <tr>
+            <td>Fanta</td>
+            <td>390.-</td>
+          </tr>
+       </table>
+     </div>
+     <div class="table-container">
+        <table class="listaTable">
+         <tr>
+            <th>Energiaitalok</th>
+            <th>/Doboz</th>
+          </tr>
+          <tr>
+            <td>Bomba</td>
+            <td>380.-</td>
+          </tr>
+          <tr>
+            <td>Redbull</td>
+            <td>620.-</td>
+          </tr>
+       </table>
+     </div>
+     <div class="table-container">
+        <table class="listaTable">
+         <tr>
+            <th>Kávék</th>
+            <th>/csésze</th>
+          </tr>
+          <tr>
+            <td>Presszó Kávé</td>
+            <td>550.-</td>
+          </tr>
+          <tr>
+            <td>Hosszú Kávé</td>
+            <td>550.-</td>
+          </tr>
+          <tr>
+            <td>Cappuccino</td>
+            <td>590.-</td>
+          </tr>
+          <tr>
+            <td>Ír kávé (2cl Whiskey + Presszó)</td>
+            <td>990.-</td>
+          </tr>
+          <tr>
+            <td>Jeges Kávé</td>
+            <td>830.- (Fagyival 1250.-)</td>
+          </tr>
+          <tr>
+            <td>Caffe Baileys (2cl Baileys)</td>
+            <td>990.-</td>
+          </tr>
+       </table>
+     </div>
+     <div class="table-container">
+        <table class="listaTable">
+         <tr>
+            <th>Forró Italok</th>
+            <th>/csésze</th>
+          </tr>
+          <tr>
+            <td>Tea</td>
+            <td>650.-</td>
+          </tr>
+          <tr>
+            <td>Forrócsoki</td>
+            <td>700.-</td>
+          </tr>
+       </table>
+     </div>
+     
+     
+    </div>
+     </div>
+   </div>
 
 
 
+   <!-- Second Pop-up container -->
+   <div id="myModal2" class="modal">
+    <!-- Content inside the first pop-up -->
+   <div class="modal-content">
+      <!-- Add your content for Modal 1 here -->
+      <i class="fa-solid fa-xmark close"></i>
+      <h1>Árlista</h1>
+      <div class="table-flex-container">
+<div class="table-container">
+      <table class="listaTable">
+       <tr>
+         <th>Melegszendvicsek</th>
+         <th>/db</th>
+       </tr>
+       <tr>
+         <td>Provence-i</td>
+         <td>790.-</td>
+       </tr>
+     </table>
+   </div>
+   <div class="table-container">
+    <table class="listaTable">
+     <tr>
+       <th>Koktélszendvicsek</th>
+     </tr>
+     <tr>
+        <td class="fontos">Rendezvényekre előrendeléssel!</td>
+     </tr>
+     <tr>
+        <td>Megtekinthető oldalunkon</td>
+     </tr>
+   </table>
+ </div>
+   <div class="table-container">
+    <table class="listaTable">
+     <tr>
+       <th>Gyros</th>
+       <th>/adag</th>
+     </tr>
+     <tr>
+        <td colspan="2" class="fontos">Rendezvényekre előrendeléssel!</td>
+     </tr>
+     <tr>
+       <td>Pitában</td>
+       <td>1290.-</td>
+     </tr>
+     <tr>
+        <td>Tálon</td>
+        <td>1990.-</td>
+      </tr>
+   </table>
+ </div>
+ <div class="table-container">
+    <table class="listaTable">
+     <tr>
+       <th>Óriáspalacsinta</th>
+       <th>/db</th>
+     </tr>
+     <tr>
+       <td>Baracklekváros</td>
+       <td>1500.-</td>
+     </tr>
+     <tr>
+        <td>Nutellás</td>
+        <td>1500.-</td>
+      </tr>
+      <tr>
+        <td>Túrórudis</td>
+        <td>1500.-</td>
+      </tr>
+      <tr>
+        <td>Sajtos-sonkás</td>
+        <td>1700.-</td>
+      </tr>
+      <tr>
+        <td>Camambertes</td>
+        <td>1700.-</td>
+      </tr>
+   </table>
+ </div>
+ <div class="table-container">
+    <table class="listaTable">
+     <tr>
+       <th>Chips-ek és Rágcsálnivalók</th>
+       <th>/db</th>
+     </tr>
+     <tr>
+       <td>Waffelini</td>
+       <td>350.-</td>
+     </tr>
+     <tr>
+        <td>Chio (Több ízben)</td>
+        <td>650.-</td>
+      </tr>
+      <tr>
+        <td>Lay's (Több ízben)</td>
+        <td>650.-</td>
+      </tr>
+      <tr>
+        <td>Sós mogyoró</td>
+        <td>450.-</td>
+      </tr>
+      <tr>
+        <td>Diákcsemege</td>
+        <td>590.-</td>
+      </tr>
+      <tr>
+        <td>Mini Sajtostallér</td>
+        <td>380.-</td>
+      </tr>
+   </table>
+ </div>
+ <div class="table-container">
+    <table class="listaTable">
+     <tr>
+       <th colspan="2">Szórakozási Lehetőségek</th>
+     </tr>
+     <tr>
+       <td>Biliárd</td>
+       <td>600.-/Óra</td>
+     </tr>
+     <tr>
+        <td>Póker</td>
+        <td>200.-/Óra</td>
+      </tr>
+      <tr>
+        <td>Ping-Pong</td>
+        <td>500.-/Óra</td>
+      </tr>
+      <tr>
+        <td>Dartsgép</td>
+        <td>100.-/Zseton</td>
+      </tr>
+      <tr>
+        <td>Csocsóasztal</td>
+        <td>100.-/Zseton</td>
+      </tr>
+   </table>
+ </div>
+
+   
+    
+    
+   </div>
+    </div>
+  </div>
 
         
 

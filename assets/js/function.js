@@ -11,6 +11,7 @@ hamburger.addEventListener('click', () => {
     navDivs.forEach(navDiv => navDiv.classList.toggle('active'));
 });
 
+
 // Nav eltűnik görgetésnél
     // media szélesség definiálása
     function isMediaScreen() {
@@ -53,6 +54,26 @@ hamburger.addEventListener('click', () => {
 
   // Meghívás ha van görgetés
   toggleNavVisibility();
+
+
+  //Hamburger Menü bezáródik görgetésre
+
+const currentScrollPos = window.scrollY;
+window.onscroll = function() {
+    let prevScrollpos = window.scrollY;
+
+  if (prevScrollpos == currentScrollPos) {
+// Látszódó menü
+    nav.classList.remove("hidden");
+  } 
+  else {
+// Rejtett menü
+    hamburger.classList.remove('active');
+    navDivs.forEach(navDiv => navDiv.classList.remove('active'));
+    nav.classList.remove('active');
+  }  
+  prevScrollpos = currentScrollPos;
+}
 
 
 //Carousel
@@ -180,3 +201,59 @@ function initMap() {
     title: 'Kávézó' // You can customize the marker title as needed
   });
 }
+
+
+
+
+
+
+
+
+
+  // Function to open the specified modal
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'block';
+    document.body.classList.add('modal-open'); // Add class to lock scrolling
+  }
+
+  // Function to close the specified modal
+  function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open'); // Remove class to unlock scrolling
+  }
+
+  // Get references to the buttons
+  const openModalBtn1 = document.getElementById('itallapGomb');
+  const openModalBtn2 = document.getElementById('arlistaGomb');
+
+  // When the user clicks the first button, display Modal 1
+  openModalBtn1.addEventListener('click', () => {
+    openModal('myModal1');
+  });
+
+  // When the user clicks the second button, display Modal 2
+  openModalBtn2.addEventListener('click', () => {
+    openModal('myModal2');
+  });
+
+  // Get the close buttons inside the pop-ups
+  const closeBtns = document.querySelectorAll('.close');
+
+  // Add event listeners to close the modals when the close button is clicked
+  closeBtns.forEach((closeBtn) => {
+    closeBtn.addEventListener('click', () => {
+      const modalId = closeBtn.parentNode.parentNode.id;
+      closeModal(modalId);
+    });
+  });
+
+  // Add event listener to close the modals when clicking outside the pop-up
+  window.addEventListener('click', (event) => {
+    if (event.target.classList.contains('modal')) {
+      const modalId = event.target.id;
+      closeModal(modalId);
+    }
+  });
+
