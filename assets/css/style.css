@@ -935,6 +935,7 @@ h1
    .modal-content
     {
         margin-inline: 0;
+        margin-block: var(--navbar-height);
     }
 
 }
